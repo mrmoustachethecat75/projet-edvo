@@ -1,0 +1,19 @@
+{
+  "name": "html-js-css",
+  "version": "1.0.0",
+  "description": "HTML + CSS + JS",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "start": "http-server --port 443"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/helper-module-imports": "^7.18.6",
+    "axios": "^0.27.2",
+    "form-data": "^4.0.0",
+    "node": "^18.9.0"
+  }
+}
