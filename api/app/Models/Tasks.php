@@ -19,7 +19,8 @@ class Tasks extends Model
         'tab_wc',
         'tab_frigo', 
         'tab_ramasse',
-        'tab_ext',        
+        'tab_ext',   
+        'tab_nb_tasks',     
         'created_at',
     ];
 }

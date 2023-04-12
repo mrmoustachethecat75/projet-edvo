@@ -66,10 +66,10 @@ function createTable (tabN, data) {
     let tdDimancheText = document.createTextNode('Dimanche');
     tdDimanche.appendChild(tdDimancheText);
     trTitle.appendChild(tdDimanche);
-    // let tdNbTask = document.createElement('td');
-    // let tdNbTaskText = document.createTextNode('Nombres de tâches');
-    // tdNbTask.appendChild(tdNbTaskText);
-    // trTitle.appendChild(tdNbTask);
+    let tdNbTask = document.createElement('td');
+    let tdNbTaskText = document.createTextNode('Nombres de tâches');
+    tdNbTask.appendChild(tdNbTaskText);
+    trTitle.appendChild(tdNbTask);
     let tbody = document.createElement('tbody');
     table.appendChild(tbody);
     let nbtask = 0;
@@ -87,7 +87,7 @@ function createTable (tabN, data) {
         let colText8 = document.createTextNode('8');
         let colText9 = document.createTextNode('9');
         let colText10 = document.createTextNode('10');
-        for(let cl = 0; cl < 8;cl++){
+        for(let cl = 0; cl <= 8;cl++){
             let col = document.createElement('td');
             col.setAttribute('id', cl);
             col.setAttribute('class', 'col');
@@ -95,177 +95,176 @@ function createTable (tabN, data) {
             if (col.id == 0){
             let colText = document.createTextNode(tabN[n]);
             col.appendChild(colText);
-        }
-        if (col.id == 1){
-            if (data.lundi.cave.resident === tabN[n]){
-                col.appendChild(colText5);
             }
-            if (data.lundi.wc.resident === tabN[n]){
-                col.appendChild(colText7);
+            if (col.id == 1){
+                if (data.lundi.cave.resident === tabN[n]){
+                    col.appendChild(colText5);
+                }
+                if (data.lundi.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.lundi.salleGt.resident === tabN[n]){
+                    col.appendChild(colText3);
+                }
+                if (data.lundi.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.lundi.poubelle.resident === tabN[n]){
+                    col.appendChild(colText6);
+                }
+                if (data.lundi.ext.resident === tabN[n]){
+                    col.appendChild(colText10);
+                }
+                if (data.lundi.couloir.resident1 === tabN[n] || data.lundi.couloir.resident2 === tabN[n]){
+                    col.appendChild(colText4);
+                }
+                if (data.lundi.frigo.resident1 === tabN[n] || data.lundi.frigo.resident2 === tabN[n]){
+                    col.appendChild(colText8);
+                }
+                if (data.lundi.cuisine.resident1 === tabN[n] || data.lundi.cuisine.resident2 === tabN[n] || data.lundi.cuisine.resident3 === tabN[n]){
+                    col.appendChild(colText1);
+                }
+                if (data.lundi.ramasse.resident1 === tabN[n] || data.lundi.ramasse.resident2 === tabN[n] || data.lundi.ramasse.resident3 === tabN[n]){
+                    col.appendChild(colText9);
+                }
             }
-            if (data.lundi.salleGt.resident === tabN[n]){
-                col.appendChild(colText3);
+            if (col.id == 2){
+                if (data.mardi.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.mardi.salleGt.resident === tabN[n]){
+                    col.appendChild(colText3);
+                }
+                if (data.mardi.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.mardi.couloir.resident1 === tabN[n] || data.mardi.couloir.resident2 === tabN[n]){
+                    col.appendChild(colText4);
+                }
+                if (data.mardi.frigo.resident1 === tabN[n] || data.mardi.frigo.resident2 === tabN[n]){
+                    col.appendChild(colText8);
+                }
+                if (data.mardi.cuisine.resident1 === tabN[n] || data.mardi.cuisine.resident2 === tabN[n] || data.mardi.cuisine.resident3 === tabN[n]){
+                    col.appendChild(colText1);
+                }
+                if (data.mardi.ramasse.resident1 === tabN[n] || data.mardi.ramasse.resident2 === tabN[n] || data.mardi.ramasse.resident3 === tabN[n]){
+                    col.appendChild(colText9);
+                }
             }
-            if (data.lundi.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
+            if (col.id == 3){
+                if (data.mercredi.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.mercredi.salleGt.resident === tabN[n]){
+                    col.appendChild(colText3);
+                }
+                if (data.mercredi.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.mercredi.couloir.resident1 === tabN[n] || data.mercredi.couloir.resident2 === tabN[n]){
+                    col.appendChild(colText4);
+                }
+                if (data.mercredi.frigo.resident1 === tabN[n] || data.mercredi.frigo.resident2 === tabN[n]){
+                    col.appendChild(colText8);
+                }
+                if (data.mercredi.cuisine.resident1 === tabN[n] || data.mercredi.cuisine.resident2 === tabN[n] || data.mercredi.cuisine.resident3 === tabN[n]){
+                    col.appendChild(colText1);
+                }
+                if (data.mercredi.ramasse.resident1 === tabN[n] || data.mercredi.ramasse.resident2 === tabN[n] || data.mercredi.ramasse.resident3 === tabN[n]){
+                    col.appendChild(colText9);
+                }
             }
-            if (data.lundi.poubelle.resident === tabN[n]){
-                col.appendChild(colText6);
+            if (col.id == 4){
+                if (data.jeudi.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.jeudi.salleGt.resident === tabN[n]){
+                    col.appendChild(colText3);
+                }
+                if (data.jeudi.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.jeudi.couloir.resident1 === tabN[n] || data.jeudi.couloir.resident2 === tabN[n]){
+                    col.appendChild(colText4);
+                }
+                if (data.jeudi.frigo.resident1 === tabN[n] || data.jeudi.frigo.resident2 === tabN[n]){
+                    col.appendChild(colText8);
+                }
+                if (data.jeudi.cuisine.resident1 === tabN[n] || data.jeudi.cuisine.resident2 === tabN[n] || data.jeudi.cuisine.resident3 === tabN[n]){
+                    col.appendChild(colText1);
+                }
+                if (data.jeudi.ramasse.resident1 === tabN[n] || data.jeudi.ramasse.resident2 === tabN[n] || data.jeudi.ramasse.resident3 === tabN[n]){
+                    col.appendChild(colText9);
+                }
             }
-            if (data.lundi.ext.resident === tabN[n]){
-                col.appendChild(colText10);
+            if (col.id == 5){
+                if (data.vendredi.cave.resident === tabN[n]){
+                    col.appendChild(colText5);
+                }
+                if (data.vendredi.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.vendredi.salleGt.resident === tabN[n]){
+                    col.appendChild(colText3);
+                }
+                if (data.vendredi.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.vendredi.poubelle.resident === tabN[n]){
+                    col.appendChild(colText6);
+                }
+                if (data.vendredi.ext.resident === tabN[n]){
+                    col.appendChild(colText10);
+                }
+                if (data.vendredi.couloir.resident1 === tabN[n] || data.vendredi.couloir.resident2 === tabN[n]){
+                    col.appendChild(colText4);
+                }
+                if (data.vendredi.frigo.resident1 === tabN[n] || data.vendredi.frigo.resident2 === tabN[n]){
+                    col.appendChild(colText8);
+                }
+                if (data.vendredi.cuisine.resident1 === tabN[n] || data.vendredi.cuisine.resident2 === tabN[n] || data.vendredi.cuisine.resident3 === tabN[n]){
+                    col.appendChild(colText1);
+                }
+                if (data.vendredi.ramasse.resident1 === tabN[n] || data.vendredi.ramasse.resident2 === tabN[n] || data.vendredi.ramasse.resident3 === tabN[n]){
+                    col.appendChild(colText9);
+                }
             }
-            if (data.lundi.couloir.resident1 === tabN[n] || data.lundi.couloir.resident2 === tabN[n]){
-                col.appendChild(colText4);
+            if (col.id == 6) {
+                if (data.samedi.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.samedi.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.samedi.frigo.resident === tabN[n] ){
+                    col.appendChild(colText8);
+                }
+                if (data.samedi.cuisine.resident1 === tabN[n] || data.samedi.cuisine.resident2 === tabN[n] ){
+                    col.appendChild(colText1);
+                }
             }
-            if (data.lundi.frigo.resident1 === tabN[n] || data.lundi.frigo.resident2 === tabN[n]){
-                col.appendChild(colText8);
+            if (col.id == 7){
+                if (data.dimanche.wc.resident === tabN[n]){
+                    col.appendChild(colText7);
+                }
+                if (data.dimanche.salleAManger.resident === tabN[n]){
+                    col.appendChild(colText2);
+                }
+                if (data.dimanche.frigo.resident1 === tabN[n] ){
+                    col.appendChild(colText8);
+                }
+                if (data.dimanche.cuisine.resident1 === tabN[n] || data.dimanche.cuisine.resident2 === tabN[n] || data.dimanche.cuisine.resident3 === tabN[n]){
+                    col.appendChild(colText1);
+                }
             }
-            if (data.lundi.cuisine.resident1 === tabN[n] || data.lundi.cuisine.resident2 === tabN[n] || data.lundi.cuisine.resident3 === tabN[n]){
-                col.appendChild(colText1);
-            }
-            if (data.lundi.ramasse.resident1 === tabN[n] || data.lundi.ramasse.resident2 === tabN[n] || data.lundi.ramasse.resident3 === tabN[n]){
-                col.appendChild(colText9);
-            }
-        }
-        if (col.id == 2){
-            if (data.mardi.wc.resident === tabN[n]){
-                col.appendChild(colText7);
-            }
-            if (data.mardi.salleGt.resident === tabN[n]){
-                col.appendChild(colText3);
-            }
-            if (data.mardi.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
-            }
-            if (data.mardi.couloir.resident1 === tabN[n] || data.mardi.couloir.resident2 === tabN[n]){
-                col.appendChild(colText4);
-            }
-            if (data.mardi.frigo.resident1 === tabN[n] || data.mardi.frigo.resident2 === tabN[n]){
-                col.appendChild(colText8);
-            }
-            if (data.mardi.cuisine.resident1 === tabN[n] || data.mardi.cuisine.resident2 === tabN[n] || data.mardi.cuisine.resident3 === tabN[n]){
-                col.appendChild(colText1);
-            }
-            if (data.mardi.ramasse.resident1 === tabN[n] || data.mardi.ramasse.resident2 === tabN[n] || data.mardi.ramasse.resident3 === tabN[n]){
-                col.appendChild(colText9);
-            }
-        }
-        if (col.id == 3){
-            if (data.mercredi.wc.resident === tabN[n]){
-                col.appendChild(colText7);
-            }
-            if (data.mercredi.salleGt.resident === tabN[n]){
-                col.appendChild(colText3);
-            }
-            if (data.mercredi.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
-            }
-            if (data.mercredi.couloir.resident1 === tabN[n] || data.mercredi.couloir.resident2 === tabN[n]){
-                col.appendChild(colText4);
-            }
-            if (data.mercredi.frigo.resident1 === tabN[n] || data.mercredi.frigo.resident2 === tabN[n]){
-                col.appendChild(colText8);
-            }
-            if (data.mercredi.cuisine.resident1 === tabN[n] || data.mercredi.cuisine.resident2 === tabN[n] || data.mercredi.cuisine.resident3 === tabN[n]){
-                col.appendChild(colText1);
-            }
-            if (data.mercredi.ramasse.resident1 === tabN[n] || data.mercredi.ramasse.resident2 === tabN[n] || data.mercredi.ramasse.resident3 === tabN[n]){
-                col.appendChild(colText9);
-            }
-        }
-        if (col.id == 4){
-            if (data.jeudi.wc.resident === tabN[n]){
-                col.appendChild(colText7);
-            }
-            if (data.jeudi.salleGt.resident === tabN[n]){
-                col.appendChild(colText3);
-            }
-            if (data.jeudi.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
-            }
-            if (data.jeudi.couloir.resident1 === tabN[n] || data.jeudi.couloir.resident2 === tabN[n]){
-                col.appendChild(colText4);
-            }
-            if (data.jeudi.frigo.resident1 === tabN[n] || data.jeudi.frigo.resident2 === tabN[n]){
-                col.appendChild(colText8);
-            }
-            if (data.jeudi.cuisine.resident1 === tabN[n] || data.jeudi.cuisine.resident2 === tabN[n] || data.jeudi.cuisine.resident3 === tabN[n]){
-                col.appendChild(colText1);
-            }
-            if (data.jeudi.ramasse.resident1 === tabN[n] || data.jeudi.ramasse.resident2 === tabN[n] || data.jeudi.ramasse.resident3 === tabN[n]){
-                col.appendChild(colText9);
-            }
-        }
-        if (col.id == 5){
-            if (data.vendredi.cave.resident === tabN[n]){
-                col.appendChild(colText5);
-            }
-            if (data.vendredi.wc.resident === tabN[n]){
-                col.appendChild(colText7);
-            }
-            if (data.vendredi.salleGt.resident === tabN[n]){
-                col.appendChild(colText3);
-            }
-            if (data.vendredi.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
-            }
-            if (data.vendredi.poubelle.resident === tabN[n]){
-                col.appendChild(colText6);
-            }
-            if (data.vendredi.ext.resident === tabN[n]){
-                col.appendChild(colText10);
-            }
-            if (data.vendredi.couloir.resident1 === tabN[n] || data.vendredi.couloir.resident2 === tabN[n]){
-                col.appendChild(colText4);
-            }
-            if (data.vendredi.frigo.resident1 === tabN[n] || data.vendredi.frigo.resident2 === tabN[n]){
-                col.appendChild(colText8);
-            }
-            if (data.vendredi.cuisine.resident1 === tabN[n] || data.vendredi.cuisine.resident2 === tabN[n] || data.vendredi.cuisine.resident3 === tabN[n]){
-                col.appendChild(colText1);
-            }
-            if (data.vendredi.ramasse.resident1 === tabN[n] || data.vendredi.ramasse.resident2 === tabN[n] || data.vendredi.ramasse.resident3 === tabN[n]){
-                col.appendChild(colText9);
-            }
-        }
-        if (col.id == 6) {
-            if (data.samedi.wc.resident === tabN[n]){
-                col.appendChild(colText7);
-            }
-            if (data.samedi.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
-            }
-            if (data.samedi.frigo.resident === tabN[n] ){
-                col.appendChild(colText8);
-            }
-            if (data.samedi.cuisine.resident1 === tabN[n] || data.samedi.cuisine.resident2 === tabN[n] ){
-                col.appendChild(colText1);
-            }
-        }
-        if (col.id == 7){
-            if (data.dimanche.wc.resident === tabN[n]){
-                col.appendChild(colText7);
-            }
-            if (data.dimanche.salleAManger.resident === tabN[n]){
-                col.appendChild(colText2);
-            }
-            if (data.dimanche.frigo.resident1 === tabN[n] ){
-                col.appendChild(colText8);
-            }
-            if (data.dimanche.cuisine.resident1 === tabN[n] || data.dimanche.cuisine.resident2 === tabN[n] || data.dimanche.cuisine.resident3 === tabN[n]){
-                col.appendChild(colText1);
-            }
-        }
-        
-        
-        // if (col.id == 8){
             
-        //     for (let ro=0; ro<8;ro++){
-
-        //     }
-           
-        // }
+            
+            if (col.id == 8){
+                console.log(data.nbTasks);
+                let textNb = document.createTextNode(data.nbTasks[n]);
+                    col.appendChild(textNb);
+            
+            }
     }}
     return divTable;
     }
@@ -274,6 +273,7 @@ Promise.all([getAllTask(headers), getAllResident(headers)])
 .then(res => {
     let nbD = (res[0].data.length) - 1;
     let dataTasks = JSON.parse(res[0].data[nbD].week_tasks);
+    console.log(dataTasks.nbTasks);
     let dataTasksDate = res[0].data[nbD].created_at;
     let dataResident = res[1].data.sort((x, y) => x.id - y.id);
     let tabId = [];
@@ -358,7 +358,7 @@ Promise.all([getAllTask(headers), getAllResident(headers)])
             }
         }
         
-        function Day (lundi, mardi, mercredi, jeudi, vendredi,samedi, dimanche ){
+        function Day (lundi, mardi, mercredi, jeudi, vendredi,samedi, dimanche , nbTasks){
             this.lundi = lundi;
             this.mardi = mardi;
             this.mercredi = mercredi;
@@ -366,6 +366,7 @@ Promise.all([getAllTask(headers), getAllResident(headers)])
             this.vendredi = vendredi;
             this.samedi = samedi;
             this.dimanche = dimanche;
+            this.nbTasks = nbTasks;
         }
         function NbTask (resident1,resident2,resident3,nbTask) {
             if (nbTask === 1){  
@@ -539,7 +540,27 @@ Promise.all([getAllTask(headers), getAllResident(headers)])
         let vendredi = new CreateObjetDay (createObjetResident(tabName,cuisine(3,tabVendredi)),createObjetResident(tabName,salle(1,tabVendredi)),createObjetResident(tabName,gt(1,tabVendredi)),createObjetResident(tabName,couloir(2,tabVendredi)),createObjetResident(tabName,cave(1,tabVendredi)),createObjetResident(tabName,poubelle(1,tabVendredi)),createObjetResident(tabName,wc(1,tabVendredi)),createObjetResident(tabName,frigo(2,tabVendredi)),createObjetResident(tabName,ramasse(3,tabVendredi)),createObjetResident(tabName,ext(1,tabVendredi)), 1);
         let samedi = new CreateObjetDay (createObjetResident(tabName,cuisine(3,tabSamedi)),createObjetResident(tabName,salle(1,tabSamedi)),'gt','couloir','cave','poubelle',createObjetResident(tabName,wc(1,tabSamedi)),createObjetResident(tabName,frigo(2,tabSamedi)),'ramasse','ext', 3);
         let dimanche = new CreateObjetDay (createObjetResident(tabName,cuisine(3,tabDimanche)),createObjetResident(tabName,salle(1,tabDimanche)),'gt','couloir','cave','poubelle',createObjetResident(tabName,wc(1,tabDimanche)),createObjetResident(tabName,frigo(2,tabDimanche)),'ramasse','ext', 3);
-        let semaine = new Day(lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche);
+        let tabAll = tabCuisine.concat(tabSalle,tabGt,tabCouloir,tabCave,tabPoubelle,tabWc,tabFrigo,tabRam,tabExt);
+        console.log(tabAll.length);
+        // tabAll.sort(function(a,b){
+        //     return a-b;
+        // });
+        let tabNbTask = [];
+        let count = 0;
+        for (let y=0;y<=tabId.length;y++){
+            for (let element of tabAll){
+                console.log(element);
+                if (element === y){
+                    count++;
+                }
+                
+            }
+            tabNbTask.push(count);
+            count = 0;
+        }
+        
+        
+        let semaine = new Day(lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche, tabNbTask);
         console.log(semaine);
         let date = new Date();
         let day = date.getDate();
@@ -549,55 +570,25 @@ Promise.all([getAllTask(headers), getAllResident(headers)])
         divVueTable.appendChild(divNewWeek);
         let titleNewTable = divTitle(year+"-"+"0"+mouth+"-0"+day);
         divNewWeek.prepend(titleNewTable);
-        let tabAll = tabCuisine.concat(tabSalle,tabGt,tabCouloir,tabCave,tabPoubelle,tabWc,tabFrigo,tabRam,tabExt);
-        console.log(tabAll);
-        
-        function countTask(res, tab){
-            let nbTaskres = 0;
-            for(let cn=0;cn<=tab.length;cn++){
-                if(tab[cn]==res){
-                    nbTaskres++
-                }
-            }
-            return nbTaskres;
-        }
-        // 
-        // let tabcountTask = [];
-        // function tabCn (tab){
-            for (let nbt=0;nbt<=tabId.length;nbt){
-                console.log(countTask(tabId[nbt], tabAll));
-            }
-            
-        // }
-        
-        
-        // console.log(tabCount);
-       
         
         
         
-        // let tabSa = [];
-        // let tabG = [];
-        // let tabCo = [];
-        // let tabCa = [];
-        // let tabPo = [];
-        // let tabW = [];
-        // let tabFr = [];
-        // let tabRa = [];
-        // let tabEx = [];
-        // let dataTask = new FormData();
-        // dataTask.append('week_tasks', JSON.stringify(semaine));
-        // dataTask.append('tab_cuisine', tabCuisine);
-        // dataTask.append('tab_salle', tabSalle);
-        // dataTask.append('tab_gt',tabGt);
-        // dataTask.append('tab_couloir', tabCouloir);
-        // dataTask.append('tab_cave', tabCave);
-        // dataTask.append('tab_poubelle', tabPoubelle);
-        // dataTask.append('tab_wc', tabWc);
-        // dataTask.append('tab_frigo', tabFrigo);
-        // dataTask.append('tab_ramasse', tabRam);
-        // dataTask.append('tab_ext', tabExt);
-        // console.log(dataTask)
+        console.log(tabNbTask);
+      
+        let dataTask = new FormData();
+        dataTask.append('week_tasks', JSON.stringify(semaine));
+        dataTask.append('tab_cuisine', tabCuisine);
+        dataTask.append('tab_salle', tabSalle);
+        dataTask.append('tab_gt',tabGt);
+        dataTask.append('tab_couloir', tabCouloir);
+        dataTask.append('tab_cave', tabCave);
+        dataTask.append('tab_poubelle', tabPoubelle);
+        dataTask.append('tab_wc', tabWc);
+        dataTask.append('tab_frigo', tabFrigo);
+        dataTask.append('tab_ramasse', tabRam);
+        dataTask.append('tab_ext', tabExt);
+        dataTask.append('tab_nb_tasks',tabNbTask);
+        console.log(dataTask)
         // axios.post(urlAddTask, dataTask, {
         //     headers: {
         //         "Content-Type": "multipart/form-data",

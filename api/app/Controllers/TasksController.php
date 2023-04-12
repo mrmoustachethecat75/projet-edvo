@@ -23,6 +23,7 @@ class TasksController extends Controller
             'tab_frigo', 
             'tab_ramasse',
             'tab_ext', 
+            'tab_nb_tasks',
             'created_at',
         ]);
         return $response->withHeader('Content-Type', 'application/json')
@@ -44,6 +45,7 @@ class TasksController extends Controller
             'tab_frigo', 
             'tab_ramasse',
             'tab_ext', 
+            'tab_nb_tasks',
             'created_at',
         ]);
         $data = $tasks->find($id);
@@ -66,6 +68,7 @@ class TasksController extends Controller
             'tab_frigo', 
             'tab_ramasse',
             'tab_ext', 
+            'tab_nb_tasks',
             'created_at',
         ]);
         $data = $resident->find($id);
@@ -89,6 +92,7 @@ class TasksController extends Controller
             'tab_frigo', 
             'tab_ramasse',
             'tab_ext', 
+            'tab_nb_tasks',
             'created_at',
         ]);
         $data = $resident->find($id);
@@ -113,6 +117,7 @@ class TasksController extends Controller
             'tab_wc'=> $request->getParam('tab_wc'),
             'tab_frigo'=> $request->getParam('tab_frigo'), 
             'tab_ramasse'=> $request->getParam('tab_ramasse'),
+            'tab_nb_tasks' => $request->getParam('tab_nb_tasks'),
             'tab_ext'=> $request->getParam('tab_ext')
             ]);
        
